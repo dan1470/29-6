@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+int chiahetcho3(char *n){
+	int s=0;
+	for (int i=0; i<strlen(n); i++){
+		s += n[i] - '0'; // tinh tong cac chu so 
+	}
+	return s%3==0; 
+} 
+int main (){
+	int t;
+	scanf ("%d",&t);
+	char n[51];
+	while (t--){
+		scanf ("%s",n);
+		if (chiahetcho3(n)) printf ("YES\n");
+		else printf ("NO\n");
+	}
+	return 0;
+}
