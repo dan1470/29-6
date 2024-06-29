@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+void tach(char *n){
+	int l=strlen(n);
+	if (l%2 != 0)
+		return;
+	for (int i=0; i<l; i+=2){
+		char m[3];    // mang moi chua so co 2 chu so 
+		m[0] = n[i];
+		m[1] = n[i+1];
+		m[2] = '\0';  // ket thuc chuoi 
+		// su dung ham atoi de chuyen chuoi ki tu thanh so nguyen 
+		int p = atoi(m);
+		printf ("%02d ",p);
+	}
+	printf ("\n");
+} 
+int main (){
+	char n[101];
+	scanf ("%s",n);
+	tach(n);
+	return 0;
+}
